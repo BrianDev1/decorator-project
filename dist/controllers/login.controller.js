@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Login = void 0;
+const routelog_decorator_1 = require("../decorators/routelog.decorator");
 const routes_decorators_1 = require("../decorators/routes.decorators");
 class Login {
     getLoginUser(req, res) {
@@ -24,9 +25,10 @@ class Login {
     }
 }
 __decorate([
+    routelog_decorator_1.default(),
     routes_decorators_1.default({
         path: "/login/:name/:passphrase",
-        method: "get"
+        method: "get",
     })
 ], Login.prototype, "getLoginUser", null);
 exports.Login = Login;

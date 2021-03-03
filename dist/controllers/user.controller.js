@@ -7,16 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Users = void 0;
+const routelog_decorator_1 = require("../decorators/routelog.decorator");
 const routes_decorators_1 = require("../decorators/routes.decorators");
 class Users {
     getUsers(req, res) {
-        res.send('User area using a typescript decorator, WELCOME!!');
+        res.send("User area using a typescript decorator, WELCOME!!");
     }
 }
 __decorate([
+    routelog_decorator_1.default(),
     routes_decorators_1.default({
         path: "/users",
-        method: "get"
+        method: "get",
     })
 ], Users.prototype, "getUsers", null);
 exports.Users = Users;

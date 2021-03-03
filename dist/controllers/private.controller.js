@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Private = void 0;
+const routelog_decorator_1 = require("../decorators/routelog.decorator");
 const routes_decorators_1 = require("../decorators/routes.decorators");
 class Private {
     postPrivate(req, res) {
@@ -14,14 +15,17 @@ class Private {
             res.send("You may not enter!!!");
         }
         else {
-            res.status(200).json({ secret: "Welcome to the secret... secret... place..." });
+            res
+                .status(200)
+                .json({ secret: "Welcome to the secret... secret... place..." });
         }
     }
 }
 __decorate([
+    routelog_decorator_1.default(),
     routes_decorators_1.default({
         path: "/private",
-        method: "post"
+        method: "get",
     })
 ], Private.prototype, "postPrivate", null);
 exports.Private = Private;
