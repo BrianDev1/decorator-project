@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import routesDecorator from '../decorators/routes.decorators';
 import { METHOD, BRIANROUTES } from '../utils/functions';
-const cookieParser = require("cookie-parser");
+
 export class Private {
     @routesDecorator({
         path: BRIANROUTES.Private,

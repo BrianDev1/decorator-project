@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Private = void 0;
 const routes_decorators_1 = require("../decorators/routes.decorators");
-const cookieParser = require("cookie-parser");
 class Private {
     postPrivate(req, res) {
         if (!req.cookies.NodeServerSiteCookie) {
